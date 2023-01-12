@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+$bg-color:rgb(0, 0, 0), ;
+$lightsalmon:#fa9872;
+$lightgreen:#76FF03;
+
+@mixin testing {
+    background-color: rgb(120, 63, 226); padding: 20px; height: 200px; display: block; 
+}
+
+@mixin testtag ($def1) {
+    text-align: center;
+    font-size: $def1;
+}
+
+$width: 300px;
+.h1test {
+    width: $width;
+}
+.h2test {width: $width / 2;}
+
+.header {
+
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {color: rgb(4, 0, 255); font-size: 3rem; 
+    &:hover{color: #0f0; }
+    }
+
+p {color: rgb(4, 0, 255); font-size: 3rem;
+    &:hover{color: #0f0;}
+}
+}
+
+.test1, .test2 {@include testing; }
+
